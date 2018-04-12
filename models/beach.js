@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     location: DataTypes.STRING,
     sand_rating: DataTypes.INTEGER
-  }, {});
+  }, { tableName: "beaches", timestamps: false });
   Beach.associate = function(models) {
     Beach.hasMany(models.Lifeguard, {
       foreignKey: 'beach_id'

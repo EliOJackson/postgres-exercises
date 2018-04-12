@@ -1,16 +1,16 @@
-let sequelize = require('sequelize');
-let queryInterface = require('sequelize/lib/query-interface');
+'use strict';
 
-let createdb = (queryInterface) => {
-    const app = require('./app'); //make sure you are exporting app after attaching the necessary pieces in app.js!
-    const models = app.get('models');
-    return models.sequelize.sync({ force: true })
-        .then((queryInterface) => {
-            //soon we will include how to add stuff to the tables here!
-        })
-        .catch((err) => {
-            console.log("oh noes!", err);
-        })
-}
-//don't forget to actually call the function. Or, bonus, rewrite it as an iife.
-createdb(queryInterface);
+let models = require("./models");
+let { beaches } = require("./seeders/data/beaches");
+let { lifeguards } = require("./seeders/data/lifeguards");
+
+models.sequelize.sync({ force: true })
+    .then(() => {
+        return models.Beach.bulkCreate(beaches);
+    })
+    .then(() => {
+        return models.Lifeguard.bulkCreate(lifeguards);
+    })
+    .then(() => {
+        process.exit();
+    })
