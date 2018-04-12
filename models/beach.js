@@ -6,7 +6,9 @@ module.exports = (sequelize, DataTypes) => {
     sand_rating: DataTypes.INTEGER
   }, {});
   Beach.associate = function(models) {
-    // associations can be defined here
+    Beach.hasMany(models.Lifeguard, {
+      foreignKey: 'beach_id'
+    });
   };
   return Beach;
 };
