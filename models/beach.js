@@ -9,6 +9,9 @@ module.exports = (sequelize, DataTypes) => {
     Beach.hasMany(models.Lifeguard, {
       foreignKey: 'beach_id'
     });
+    Beach.hasMany(models.Castle, {
+      foreignKey: 'beach_id'
+    });
   };
   return Beach;
 };

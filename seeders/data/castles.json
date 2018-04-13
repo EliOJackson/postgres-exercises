@@ -1,0 +1,17 @@
+{
+    "castles": [
+        {
+            "description": "A large castle that is well made with a moat. How cool.",
+            "beach_id": 1
+        
+        },
+        {
+            "description": "A pathetic castle made by some little kids. Get it together.",
+            "beach_id": 3
+        },
+        {
+            "description": "A huge castle made by some try hards, get a life!!",
+            "beach_id": 2
+        }
+    ]
+}

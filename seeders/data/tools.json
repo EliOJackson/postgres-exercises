@@ -1,0 +1,19 @@
+{
+    "tools": [
+        {
+            "name": "Shovel",
+            "description": "It helps dig the sand",
+            "tool_rating": 9
+        },
+        {
+            "name": "Bucket",
+            "description": "It hold the sand. Helps make the towers!",
+            "tool_rating": 10
+        },
+        {
+            "name": "Rake",
+            "description": "It moves the sand around, useless",
+            "tool_rating": 1
+        }
+    ]
+}
