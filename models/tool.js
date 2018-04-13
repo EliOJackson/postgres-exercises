@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
   }, { tableName: "tools", timestamps: false});
   Tool.associate = function(models) {
     Tool.belongsToMany(models.Castle, {
-      as: 'Tool Used',
+      as: 'ToolUsed',
       through: 'castle_tools'
     });
   };

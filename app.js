@@ -34,7 +34,7 @@ app.post("/castletools", ({ body: { beach_id, tool_id } }, res, next) => {
 
     Tool.findById(tool_id)
         .then(foundTool => {
-            foundTool.addCastleTool(beach_id)
+            foundTool.addToolUsed(beach_id)
                 .then((newRecord) => {
                     res.status(201).json(newRecord);
                 });
