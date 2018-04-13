@@ -29,7 +29,6 @@ app.get("/beaches", (req, res, next) => {
         });
 });
 
-
 app.post("/castletools", ({ body: { castle_id, tool_id } }, res, next) => {
     Tool.findById(tool_id)
         .then(foundTool => {
@@ -48,4 +47,15 @@ app.post("/beaches/lifeguards", ({ body: { lifeguard_id, beach_id } }, res, next
                     res.status(201).json(newRecord);
                 });
         });
+});
+
+app.delete("/beaches", ({ body: { beach_id }}, res, next) => {
+    Beach.destroy({
+        where: {
+            id: beach_id
+        }
+    })
+    .then(beaches => {
+        res.status(200).json(beaches);
+    })
 });
