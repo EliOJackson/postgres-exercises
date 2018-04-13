@@ -5,9 +5,9 @@ module.exports = (sequelize, DataTypes) => {
     last_name: DataTypes.STRING
   }, { tableName: "lifeguards", timestamps: false });
   Lifeguard.associate = function(models) {
-     Lifeguard.belongsTo(models.Beach, {
-      foreignKey: "beach_id",
-      onDelete: "CASCADE"
+     Lifeguard.belongsToMany(models.Beach, {
+      as: "LifeguardOnDuty",
+      through: "beach_lifeguards"
      })
   };
   return Lifeguard;

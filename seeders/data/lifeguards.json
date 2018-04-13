@@ -2,33 +2,27 @@
     "lifeguards": [
         { 
         "first_name": "Tucker",
-        "last_name": "Jackson",
-        "beach_id": 1
+        "last_name": "Jackson"
         },
         { 
         "first_name": "Craig",
-        "last_name": "Orcutt",
-        "beach_id": 2
+        "last_name": "Orcutt"
         },
         {
         "first_name": "Joe",
-        "last_name": "Chesney",
-        "beach_id": 3
+        "last_name": "Chesney"
         },
         {
         "first_name": "Brock",
-        "last_name": "Lesner",
-        "beach_id": 1
+        "last_name": "Lesner"
         },
         {
         "first_name": "Stone Cold",
-        "last_name": "Steve Austin",
-        "beach_id": 2
+        "last_name": "Steve Austin"
         },
         {
         "first_name": "The",
-        "last_name": "Rock",
-        "beach_id": 3
+        "last_name": "Rock"
         }
     ]
 }

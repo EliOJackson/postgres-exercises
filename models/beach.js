@@ -6,8 +6,8 @@ module.exports = (sequelize, DataTypes) => {
     sand_rating: DataTypes.INTEGER
   }, { tableName: "beaches", timestamps: false });
   Beach.associate = function(models) {
-    Beach.hasMany(models.Lifeguard, {
-      foreignKey: 'beach_id'
+    Beach.belongsToMany(models.Lifeguard, {
+      through: 'beach_lifeguards'
     });
     Beach.hasMany(models.Castle, {
       foreignKey: 'beach_id'

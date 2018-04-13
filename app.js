@@ -30,11 +30,20 @@ app.get("/beaches", (req, res, next) => {
 });
 
 
-app.post("/castletools", ({ body: { beach_id, tool_id } }, res, next) => {
-
+app.post("/castletools", ({ body: { castle_id, tool_id } }, res, next) => {
     Tool.findById(tool_id)
         .then(foundTool => {
-            foundTool.addToolUsed(beach_id)
+            foundTool.addToolUsed(castle_id)
+                .then((newRecord) => {
+                    res.status(201).json(newRecord);
+                });
+        });
+});
+
+app.post("/beaches/lifeguards", ({ body: { lifeguard_id, beach_id } }, res, next) => {
+    Lifeguard.findById(lifeguard_id)
+        .then(foundLifeguard => {
+            foundLifeguard.addLifeguardOnDuty(beach_id)
                 .then((newRecord) => {
                     res.status(201).json(newRecord);
                 });
