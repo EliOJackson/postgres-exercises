@@ -1,5 +1,19 @@
 {
     "beaches": [
-        {}
+        {
+            "name": "Nude Beach",
+            "location": "Your Dreams",
+            "sand_rating": 8
+        },
+        {
+            "name": "Life's a Beach",
+            "location": "Im just playin in the sand",
+            "sand_rating": 2
+        },
+        {
+            "name": "Private Beach",
+            "location": "Private",
+            "sand_rating": 11
+        }
     ]
 }
