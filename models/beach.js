@@ -1,4 +1,9 @@
 'use strict';
+
+const express = require("express");
+const bodyParser = require("body-parser");
+const app = express();
+
 module.exports = (sequelize, DataTypes) => {
   var Beach = sequelize.define('Beach', {
     name: DataTypes.STRING,
@@ -15,3 +20,6 @@ module.exports = (sequelize, DataTypes) => {
   };
   return Beach;
 };
+
+
+
