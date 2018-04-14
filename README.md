@@ -8,8 +8,11 @@ Run the following command:
 ```username=# CREATE DATABASE testdb;```
 
 Connect to the database: 
-```username=# \c testdb;
-// OUTPUT => You are now connected to database "testdb" as user "yourusername".```
+```
+username=# \c testdb;
+// OUTPUT => You are now connected to database "testdb" as user "yourusername".
+
+```
 
 Be sure to run the following in your command line:
 
